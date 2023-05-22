@@ -5,9 +5,9 @@
 <script setup>
 import { h, useSlots, reactive } from "vue";
 
-import AppStepperHeader from "./AppStepperHeader.vue";
-import AppStepperItem from "./AppStepperItem.vue";
-import AppStepperActions from "./AppStepperActions.vue";
+import VueStepperHeader from "./VueStepperHeader.vue";
+import VueStepperItem from "./VueStepperItem.vue";
+import VueStepperActions from "./VueStepperActions.vue";
 
 const props = defineProps({
   steps: {
@@ -33,7 +33,7 @@ const generateHeader = () => {
     "div",
     { class: ["mb-8"] },
     slot?.header ??
-      h(AppStepperHeader, { steps: props.steps, step: props.step })
+      h(VueStepperHeader, { steps: props.steps, step: props.step })
   );
 };
 
@@ -61,7 +61,7 @@ const generateContent = () => {
 const generateItem = (element, index) => {
   if (state.stepHasBeenVisited[index]) {
     return h(
-      AppStepperItem,
+      VueStepperItem,
       { style: { width: `${100 / props.steps.length}%` } },
       () => element
     );
@@ -70,7 +70,7 @@ const generateItem = (element, index) => {
   if (index === props.step - 1) {
     state.stepHasBeenVisited[index] = true;
     return h(
-      AppStepperItem,
+      VueStepperItem,
       { style: { width: `${100 / props.steps.length}%` } },
       () => element
     );
@@ -82,7 +82,7 @@ const generateItem = (element, index) => {
 const generateActions = () => {
   return slot?.actions
     ? h("div", null, slot.actions())
-    : h(AppStepperActions, {
+    : h(VueStepperActions, {
         "onClick:next": () => emit("click:next"),
         "onClick:previous": () => emit("click:previous"),
         "onClick:submit": () => emit("click:submit"),
