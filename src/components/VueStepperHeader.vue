@@ -1,25 +1,25 @@
 <template>
   <div class="py-4">
     <div class="w-100 d-flex justify-center mb-8">
-      <app-stepper-step-header
+      <vue-stepper-step-header
         class="d-flex justify-center"
         :circle-content="step"
         active
         horizontal
       >
         {{ steps[step - 1] }}
-      </app-stepper-step-header>
+      </vue-stepper-step-header>
     </div>
     <div class="d-flex align-center">
       <template v-for="(stepHeader, index) in steps" :key="`step-${index}`">
-        <app-stepper-step-header
+        <vue-stepper-step-header
           :active="step === index + 1"
           :was-active="step > index + 1"
           :circle-content="index + 1"
           :small="true"
         >
           {{ stepHeader }}
-        </app-stepper-step-header>
+        </vue-stepper-step-header>
         <v-divider
           v-if="index !== steps.length - 1"
           :thickness="2"
@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import AppStepperStepHeader from "./AppStepperStepHeader.vue";
+import VueStepperStepHeader from "./VueStepperStepHeader.vue";
 
 defineProps({
   step: {
