@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-row-reverse">
-    <v-btn
+    <button
       v-if="!isLastStep"
       color="primary"
       :disabled="disabled"
@@ -8,13 +8,13 @@
       @click="clickNext"
     >
       Next
-    </v-btn>
+    </button>
 
-    <v-btn v-else @click="clickSubmit" :loading="disabled" color="primary">
+    <button v-else @click="clickSubmit" :loading="disabled" color="primary">
       Submit
-    </v-btn>
+    </button>
 
-    <v-btn
+    <button
       v-if="!isFirstStep"
       :disabled="disabled"
       color="primary"
@@ -25,7 +25,7 @@
       :loading="disabled"
     >
       Previous
-    </v-btn>
+    </button>
   </div>
 </template>
 
