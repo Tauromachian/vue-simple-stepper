@@ -1,5 +1,5 @@
 <template>
-  <div class="align-center step-header" :class="{ flex: horizontal }">
+  <div class="step-header" :class="{ flex: horizontal }">
     <v-avatar :color="color">
       <v-icon v-if="wasActive">mdi-check</v-icon>
       <div v-else class="w-100 d-flex justify-center">
