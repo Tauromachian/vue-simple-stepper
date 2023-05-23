@@ -31,7 +31,7 @@ const slot = useSlots();
 const generateHeader = () => {
   return h(
     "div",
-    { class: ["mb-8"] },
+    { class: ["stepper-header"] },
     slot?.header ??
       h(VueStepperHeader, { steps: props.steps, step: props.step })
   );
@@ -45,7 +45,7 @@ const generateContent = () => {
   return h(
     "div",
     {
-      class: ["mb-4 d-flex overflow-x-hidden stepper-content"],
+      class: ["stepper-content"],
       style: {
         width: `${100 * props.steps.length}%`,
         transform: `translateX(-${
@@ -92,10 +92,25 @@ const generateActions = () => {
 };
 
 const render = () => {
-  return h("div", { class: ["overflow-x-hidden"] }, [
+  return h("div", { class: ["stepper"] }, [
     generateHeader(),
     generateContent(),
     generateActions(),
   ]);
 };
 </script>
+
+<style scoped>
+.stepper {
+  overflow-x: hidden;
+}
+.stepper-content {
+  margin-bottom: 4px;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.stepper-header {
+  margin-bottom: 8px;
+}
+</style>
