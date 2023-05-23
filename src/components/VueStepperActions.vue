@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-row-reverse">
+  <div class="buttons-container">
     <button
       v-if="!isLastStep"
       color="primary"
@@ -52,4 +52,10 @@ const clickPrevious = () => emit("click:previous");
 const clickSubmit = () => emit("click:submit");
 </script>
 
-<style></style>
+<style scoped>
+.buttons-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 7px;
+}
+</style>
