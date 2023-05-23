@@ -1,6 +1,6 @@
 <template>
   <div class="py-4">
-    <div class="w-100 d-flex justify-center mb-8">
+    <div class="stepper-header__active">
       <vue-stepper-step-header
         class="d-flex justify-center"
         :circle-content="step"
@@ -10,7 +10,7 @@
         {{ steps[step - 1] }}
       </vue-stepper-step-header>
     </div>
-    <div class="d-flex align-center">
+    <div class="stepper-header__content">
       <template v-for="(stepHeader, index) in steps" :key="`step-${index}`">
         <vue-stepper-step-header
           :active="step === index + 1"
@@ -47,6 +47,17 @@ defineProps({
 </script>
 
 <style scoped>
+.stepper-header__active {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.stepper-header__content {
+  display: flex;
+}
+
 .was-active {
   color: #033562;
   border-color: #033562;
