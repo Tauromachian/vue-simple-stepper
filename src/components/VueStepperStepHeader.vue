@@ -7,7 +7,12 @@
         'step-header__circle--was-active': wasActive,
       }"
     >
-      <v-icon v-if="wasActive">mdi-check</v-icon>
+      <app-icon
+        v-if="wasActive"
+        icon="mdiCheck"
+        color="white"
+        src="../assets/check.svg"
+      ></app-icon>
       <div v-else class="step-header__circle-content">
         {{ circleContent }}
       </div>
@@ -17,6 +22,8 @@
 
 <script setup>
 import { computed } from "vue";
+
+import AppIcon from "./AppIcon.vue";
 
 const props = defineProps({
   active: {
