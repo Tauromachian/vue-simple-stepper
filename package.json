@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mdi/js": "^7.2.96",
     "sass": "^1.63.2",
     "vue": "^3.2.47"
   },
