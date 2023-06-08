@@ -1,11 +1,17 @@
 <template>
   <div class="step-header" :class="{ flex: horizontal }">
-    <v-avatar :color="color">
+    <div
+      class="step-header__circle"
+      :class="{
+        'step-header__circle--active': active,
+        'step-header__circle--was-active': wasActive,
+      }"
+    >
       <v-icon v-if="wasActive">mdi-check</v-icon>
       <div v-else class="step-header__circle-content">
         {{ circleContent }}
       </div>
-    </v-avatar>
+    </div>
   </div>
 </template>
 
@@ -37,6 +43,24 @@ const color = computed(() => {
 <style scoped>
 .step-header {
   position: relative;
+}
+
+.step-header__circle {
+  border-radius: 9999px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: var(--secondary-color-contrast);
+}
+
+.step-header__circle--active,
+.step-header__circle--was-active {
+  border-color: #033562;
+  background-color: var(--primary-color);
+  color: var(--primary-color-contrast);
 }
 
 .step-header__circle-content {
