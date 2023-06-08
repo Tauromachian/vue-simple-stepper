@@ -1,5 +1,5 @@
 <template>
-  <div class="step-header" :class="{ flex: horizontal }">
+  <div class="step-header">
     <div
       class="step-header__circle"
       :class="{
