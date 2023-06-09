@@ -53,7 +53,7 @@ defineProps({
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
 }
 
 .stepper-header__content {
