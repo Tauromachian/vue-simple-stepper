@@ -58,19 +58,4 @@ defineProps({
   display: flex;
   justify-content: space-between;
 }
-
-.was-active {
-  color: #033562;
-  border-color: #033562;
-}
-
-.active {
-  background-color: #033562;
-  border-color: #033562;
-  color: white;
-}
-
-.active__text {
-  color: #033562;
-}
 </style>
