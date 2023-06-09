@@ -6,6 +6,7 @@
         :circle-content="step"
         active
         horizontal
+        show-text
       >
         {{ steps[step - 1] }}
       </vue-stepper-step-header>

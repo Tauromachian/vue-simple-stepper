@@ -17,6 +17,9 @@
         {{ circleContent }}
       </div>
     </div>
+    <div v-if="showText" class="text-content">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -38,6 +41,10 @@ const props = defineProps({
     type: [String, Number],
     default: "",
   },
+  showText: {
+    type: Boolean,
+    default: false,
+  },
 });
 
 const color = computed(() => {
@@ -50,6 +57,13 @@ const color = computed(() => {
 <style scoped>
 .step-header {
   position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.text-content {
+  color: black;
+  margin-left: 10px;
 }
 
 .step-header__circle {
