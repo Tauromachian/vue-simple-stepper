@@ -20,12 +20,12 @@
         >
           {{ stepHeader }}
         </vue-stepper-step-header>
-        <v-divider
+        <base-divider
           v-if="index !== steps.length - 1"
           :thickness="2"
           class="border-opacity-75"
-          :color="step > index + 1 ? 'primary' : 'grey'"
-        ></v-divider>
+          :color="step > index + 1 ? '#c724f0' : '#ebe3ec'"
+        ></base-divider>
       </template>
     </div>
   </div>
@@ -33,6 +33,7 @@
 
 <script setup>
 import VueStepperStepHeader from "./VueStepperStepHeader.vue";
+import BaseDivider from "./BaseDivider.vue";
 
 defineProps({
   step: {
@@ -56,6 +57,7 @@ defineProps({
 
 .stepper-header__content {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 </style>
