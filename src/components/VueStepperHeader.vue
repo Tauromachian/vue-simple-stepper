@@ -56,6 +56,7 @@ defineProps({
 
 .stepper-header__content {
   display: flex;
+  justify-content: space-evenly;
 }
 
 .was-active {
