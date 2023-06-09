@@ -100,7 +100,9 @@ const render = () => {
 };
 </script>
 
-<style scoped>
+<style lang="scss">
+@import "../scss/main.scss";
+
 .stepper {
   overflow-x: hidden;
 }
