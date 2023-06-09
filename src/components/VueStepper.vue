@@ -107,7 +107,7 @@ const render = () => {
   overflow-x: hidden;
 }
 .stepper-content {
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   display: flex;
   overflow-x: hidden;
 }
