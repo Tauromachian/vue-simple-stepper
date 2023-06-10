@@ -9,6 +9,14 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "keywords": [
+    "vue3",
+    "stepper",
+    "wizard",
+    "vue3-component",
+    "vue-component",
+    "component"
+  ],
   "dependencies": {
     "@mdi/js": "^7.2.96",
     "sass": "^1.63.2",
