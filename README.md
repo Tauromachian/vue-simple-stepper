@@ -1,7 +1,7 @@
-# Vue 3 + Vite
+## Vue3 Easy stepper
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a Vuejs 3 compatible stepper component. A wizard of the veterans out there.
 
-## Recommended IDE Setup
+With this component you can divide a actions in sequential steps.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+
