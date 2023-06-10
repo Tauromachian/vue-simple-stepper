@@ -6,11 +6,18 @@
       :disabled="disabled"
       :loading="disabled"
       @click="clickNext"
+      class="stepper-button"
     >
       Next
     </button>
 
-    <button v-else @click="clickSubmit" :loading="disabled" color="primary">
+    <button
+      v-else
+      @click="clickSubmit"
+      :loading="disabled"
+      color="primary"
+      class="stepper-button"
+    >
       Submit
     </button>
 
