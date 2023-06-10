@@ -5,6 +5,10 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
+  test: {
+    include: ["**/*.test.js"],
+    globals: true,
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.js"),
