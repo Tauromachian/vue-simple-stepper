@@ -39,6 +39,8 @@ const generateHeader = () => {
 };
 
 const generateContent = () => {
+  if (!slot.default) return h("div");
+
   const stepperItems = slot.default().map((element, index) => {
     return generateItem(element, index);
   });
