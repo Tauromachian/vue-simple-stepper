@@ -10,6 +10,12 @@
   transition: border-color 0.25s;
 }
 
+.stepper-button--outlined {
+  border: 1px solid var(--primary-color);
+  color: black;
+  background-color: transparent;
+}
+
 .stepper-button:hover {
   border-color: #646cff;
 }

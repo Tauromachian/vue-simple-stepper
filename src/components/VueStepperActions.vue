@@ -28,7 +28,7 @@
       variant="text"
       @click="clickPrevious"
       outlined
-      class="mr-2"
+      class="mr-2 stepper-button stepper-button--outlined"
       :loading="disabled"
     >
       Previous
