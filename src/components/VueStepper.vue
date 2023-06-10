@@ -83,7 +83,17 @@ const generateItem = (element, index) => {
 
 const generateActions = () => {
   return slot?.actions
-    ? h("div", null, slot.actions())
+    ? h(
+        "div",
+        null,
+        slot.actions({
+          clickNext: () => emit("click:next"),
+          clickPrevious: () => emit("click:previous"),
+          clickSubmit: () => emit("click:submit"),
+          isFirstStep: props.step === 1,
+          isLastStep: props.step === props.steps.length,
+        })
+      )
     : h(VueStepperActions, {
         "onClick:next": () => emit("click:next"),
         "onClick:previous": () => emit("click:previous"),
