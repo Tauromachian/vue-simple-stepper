@@ -1,4 +1,4 @@
-button {
+.stepper-button {
   border-radius: 8px;
   padding: 0.6em 1.2em;
   border: 0;
@@ -9,10 +9,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+
+.stepper-button:hover {
   border-color: #646cff;
 }
-button:focus,
-button:focus-visible {
+.stepper-button:focus,
+.stepper-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
