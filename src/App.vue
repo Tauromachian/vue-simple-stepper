@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="card">
-      <vue-stepper
+      <app-stepper
         :steps="state.steps"
         :step="state.step"
         @click:next="nextStep"
@@ -11,10 +11,10 @@
         <div class="content first"></div>
         <div class="content second"></div>
         <div class="content third"></div>
-      </vue-stepper>
+      </app-stepper>
     </div>
     <div class="card">
-      <vue-stepper
+      <app-stepper
         :steps="state.steps"
         :step="state.step"
         @click:next="nextStep"
@@ -40,7 +40,7 @@
             <button @click="clickSubmit" v-if="isLastStep">Submit</button>
           </div>
         </template>
-      </vue-stepper>
+      </app-stepper>
     </div>
   </div>
 </template>
@@ -48,7 +48,7 @@
 <script setup>
 import { reactive } from "vue";
 
-import VueStepper from "./components/VueStepper.vue";
+import AppStepper from "./components/AppStepper.vue";
 
 const state = reactive({
   steps: ["Step 1", "Step 2", "Step 3"],

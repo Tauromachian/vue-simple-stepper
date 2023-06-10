@@ -1,3 +1,3 @@
-import VueStepper from "./components/VueStepper.vue";
+import AppStepper from "./components/AppStepper.vue";
 
-export default VueStepper;
+export default AppStepper;

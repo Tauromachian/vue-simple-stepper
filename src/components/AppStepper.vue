@@ -5,10 +5,10 @@
 <script setup>
 import { h, useSlots, reactive, defineAsyncComponent } from "vue";
 
-import VueStepperHeader from "./VueStepperHeader.vue";
-import VueStepperItem from "./VueStepperItem.vue";
-const VueStepperActions = defineAsyncComponent(() =>
-  import("./VueStepperActions.vue")
+import StepperHeader from "./StepperHeader.vue";
+import StepperItem from "./StepperItem.vue";
+const StepperActions = defineAsyncComponent(() =>
+  import("./StepperActions.vue")
 );
 
 const props = defineProps({
@@ -34,8 +34,7 @@ const generateHeader = () => {
   return h(
     "div",
     { class: ["stepper-header"] },
-    slot?.header ??
-      h(VueStepperHeader, { steps: props.steps, step: props.step })
+    slot?.header ?? h(StepperHeader, { steps: props.steps, step: props.step })
   );
 };
 
@@ -63,7 +62,7 @@ const generateContent = () => {
 const generateItem = (element, index) => {
   if (state.stepHasBeenVisited[index]) {
     return h(
-      VueStepperItem,
+      StepperItem,
       { style: { width: `${100 / props.steps.length}%` } },
       () => element
     );
@@ -72,7 +71,7 @@ const generateItem = (element, index) => {
   if (index === props.step - 1) {
     state.stepHasBeenVisited[index] = true;
     return h(
-      VueStepperItem,
+      StepperItem,
       { style: { width: `${100 / props.steps.length}%` } },
       () => element
     );
@@ -94,7 +93,7 @@ const generateActions = () => {
           isLastStep: props.step === props.steps.length,
         })
       )
-    : h(VueStepperActions, {
+    : h(StepperActions, {
         "onClick:next": () => emit("click:next"),
         "onClick:previous": () => emit("click:previous"),
         "onClick:submit": () => emit("click:submit"),
