@@ -1,30 +1,30 @@
-.stepper-button {
+.vue-easy-stepper-button {
   border-radius: 8px;
   padding: 0.6em 1.2em;
   border: 0;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--primary-color);
+  background-color: var(--vue-easy-primary-color);
   cursor: pointer;
   transition: border-color 0.25s;
 }
-.stepper-button:hover {
-  background-color: var(--button-hover-color);
+.vue-easy-stepper-button:hover {
+  background-color: var(--vue-easy-button-hover-color);
 }
 
-.stepper-button--outlined {
-  border: 1px solid var(--primary-color);
+.vue-easy-stepper-button--outlined {
+  border: 1px solid var(--vue-easy-primary-color);
   color: black;
   background-color: transparent;
 }
 
-.stepper-button--outlined:hover {
+.vue-easy-stepper-button--outlined:hover {
   background-color: transparent;
-  border-color: var(--button-hover-color);
+  border-color: var(--vue-easy-button-hover-color);
 }
 
-.stepper-button:focus,
-.stepper-button:focus-visible {
+.vue-easy-stepper-button:focus,
+.vue-easy-stepper-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }

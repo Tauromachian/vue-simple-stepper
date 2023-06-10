@@ -6,7 +6,7 @@
       :disabled="disabled"
       :loading="disabled"
       @click="clickNext"
-      class="stepper-button"
+      class="vue-easy-stepper-button"
     >
       Next
     </button>
@@ -16,7 +16,7 @@
       @click="clickSubmit"
       :loading="disabled"
       color="primary"
-      class="stepper-button"
+      class="vue-easy-stepper-button"
     >
       Submit
     </button>
@@ -28,7 +28,7 @@
       variant="text"
       @click="clickPrevious"
       outlined
-      class="mr-2 stepper-button stepper-button--outlined"
+      class="mr-2 vue-easy-stepper-button vue-easy-stepper-button--outlined"
       :loading="disabled"
     >
       Previous
