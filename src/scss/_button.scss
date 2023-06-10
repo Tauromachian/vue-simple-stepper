@@ -9,6 +9,9 @@
   cursor: pointer;
   transition: border-color 0.25s;
 }
+.stepper-button:hover {
+  background-color: var(--button-hover-color);
+}
 
 .stepper-button--outlined {
   border: 1px solid var(--primary-color);
@@ -16,9 +19,11 @@
   background-color: transparent;
 }
 
-.stepper-button:hover {
-  border-color: #646cff;
+.stepper-button--outlined:hover {
+  background-color: transparent;
+  border-color: var(--button-hover-color);
 }
+
 .stepper-button:focus,
 .stepper-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
