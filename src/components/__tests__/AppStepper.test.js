@@ -16,9 +16,6 @@ describe("AppStepper", () => {
     });
 
     await wrapper.vm.$nextTick();
-    await wrapper.vm.$nextTick();
-
-    console.log(wrapper.findAllComponents(StepperItem));
 
     expect(wrapper.findAllComponents(StepperItem).length).toBe(1);
   });
