@@ -3,11 +3,13 @@
 </template>
 
 <script setup>
-import { h, useSlots, reactive } from "vue";
+import { h, useSlots, reactive, defineAsyncComponent } from "vue";
 
 import VueStepperHeader from "./VueStepperHeader.vue";
 import VueStepperItem from "./VueStepperItem.vue";
-import VueStepperActions from "./VueStepperActions.vue";
+const VueStepperActions = defineAsyncComponent(() =>
+  import("./VueStepperActions.vue")
+);
 
 const props = defineProps({
   steps: {
