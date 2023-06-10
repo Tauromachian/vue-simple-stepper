@@ -11,7 +11,6 @@
 </template>
 
 <script>
-// los iconos deben ser importados aquí y en el data()
 import { mdiCheck } from "@mdi/js";
 export default {
   props: {
@@ -32,7 +31,6 @@ export default {
   data() {
     return {
       path: "",
-      // los iconos deben ser importados aquí y fuera del expor default
       icons: {
         mdiCheck,
       },
