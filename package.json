@@ -36,6 +36,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/test-utils": "^2.3.2",
+    "jsdom": "^22.1.0",
     "rollup-plugin-dynamic-import-variables": "^1.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "vite": "^4.3.2",
