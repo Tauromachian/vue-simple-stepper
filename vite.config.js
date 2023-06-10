@@ -8,8 +8,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, "src/index.js"),
-      name: "MyVueComponent",
-      fileName: (format) => `my-vue-component.${format}.js`,
+      name: "vue-easy-stepper",
+      fileName: (format) => `vue-easy-stepper.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
