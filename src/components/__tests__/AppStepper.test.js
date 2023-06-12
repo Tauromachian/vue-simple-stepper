@@ -23,7 +23,7 @@ describe("AppStepper", () => {
   it("moves to the next step on click:next", async () => {
     const steps = ["Step 1", "Step 2", "Step 3"];
     const wrapper = mount(AppStepper, {
-      props: { steps },
+      slots: { default: steps.map((step) => `<div>${step}</div>`) },
     });
 
     await wrapper.vm.$nextTick();
