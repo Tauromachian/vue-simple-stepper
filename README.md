@@ -86,13 +86,13 @@ In that case you can do it by using the CSS variables:
 
 ```CSS
 :root {
-  --vue-easy-primary-color: #c724f0;
-  --vue-easy-primary-color-contrast: white;
+  --vue-easy-stepper-primary-color: #c724f0;
+  --vue-easy-stepper-primary-color-contrast: white;
 
-  --vue-easy-button-hover-color: #b11dd6;
+  --vue-easy-stepper-button-hover-color: #b11dd6;
 
-  --vue-easy-secondary-color: #d8ceda;
-  --vue-easy-secondary-color-contrast: black;
+  --vue-easy-stepper-secondary-color: #d8ceda;
+  --vue-easy-stepper-secondary-color-contrast: black;
 }
 ```
 
@@ -106,23 +106,23 @@ Or in case you want to further customize the buttons you can overwrite or extend
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--vue-easy-primary-color);
+  background-color: var(--vue-easy-stepper-primary-color);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 .vue-easy-stepper-button:hover {
-  background-color: var(--vue-easy-button-hover-color);
+  background-color: var(--vue-easy-stepper-button-hover-color);
 }
 
 .vue-easy-stepper-button--outlined {
-  border: 1px solid var(--vue-easy-primary-color);
+  border: 1px solid var(--vue-easy-stepper-primary-color);
   color: black;
   background-color: transparent;
 }
 
 .vue-easy-stepper-button--outlined:hover {
   background-color: transparent;
-  border-color: var(--vue-easy-button-hover-color);
+  border-color: var(--vue-easy-stepper-button-hover-color);
 }
 
 .vue-easy-stepper-button:focus,

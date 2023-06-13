@@ -20,7 +20,7 @@ defineProps({
   height: 2px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--vue-easy-secondary-color);
+  background-color: var(--vue-easy-stepper-secondary-color);
   border: 0;
   border-radius: 10px;
   width: 100%;

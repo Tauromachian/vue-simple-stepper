@@ -73,15 +73,15 @@ const color = computed(() => {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--vue-easy-secondary-color);
-  color: var(--vue-easy-secondary-color-contrast);
+  background-color: var(--vue-easy-stepper-secondary-color);
+  color: var(--vue-easy-stepper-secondary-color-contrast);
 }
 
 .step-header__circle--active,
 .step-header__circle--was-active {
   border-color: #033562;
-  background-color: var(--vue-easy-primary-color);
-  color: var(--vue-easy-primary-color-contrast);
+  background-color: var(--vue-easy-stepper-primary-color);
+  color: var(--vue-easy-stepper-primary-color-contrast);
 }
 
 .step-header__circle-content {
