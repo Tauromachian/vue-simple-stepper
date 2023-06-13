@@ -9,8 +9,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/vue3-easy-stepper.es.js",
-      "require": "./dist/vue3-easy-stepper.umd.js"
+      "import": "./dist/vue-easy-stepper.es.js",
+      "require": "./dist/vue-easy-stepper.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },
