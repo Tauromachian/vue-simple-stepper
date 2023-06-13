@@ -22,7 +22,7 @@ You need to import the component doing:
 
 And its styles like this:
 
-`import "vue3-easy-data-table/dist/style.css";`
+`import "vue-easy-stepper/dist/style.css";`
 
 ## Use
 
@@ -30,23 +30,25 @@ The easiest way to use is to copy and throw this in your code:
 
 ```vue
 <template>
-  <app-stepper
+  <vue-easy-stepper
     :steps="state.steps"
     :step="state.step"
     @click:next="nextStep"
     @click:previous="previousStep"
     @click:submit="submitStep"
   >
-    <div class="content first"></div>
-    <div class="content second"></div>
-    <div class="content third"></div>
-  </app-stepper>
+    <div class="content first">asdfasd</div>
+    <div class="content second">asdfasd</div>
+    <div class="content third">asdfasd</div>
+  </vue-easy-stepper>
 </template>
 
 <script setup>
 import { reactive } from "vue";
 
-import AppStepper from "./components/AppStepper.vue";
+import "vue-easy-stepper/dist/style.css";
+
+import VueEasyStepper from "vue-easy-stepper";
 
 const state = reactive({
   steps: ["Step 1", "Step 2", "Step 3"],
@@ -133,16 +135,16 @@ In case that you need to overwrite completely the action buttons do it by using 
 
 ```vue
 <template>
-  <app-stepper
+  <vue-easy-stepper
     :steps="state.steps"
     :step="state.step"
     @click:next="nextStep"
     @click:previous="previousStep"
     @click:submit="submitStep"
   >
-    <div class="content first"></div>
-    <div class="content second"></div>
-    <div class="content third"></div>
+    <div class="content first">asdfasd</div>
+    <div class="content second">asdfasd</div>
+    <div class="content third">asdfasd</div>
 
     <template
       #actions="{
@@ -159,13 +161,15 @@ In case that you need to overwrite completely the action buttons do it by using 
         <button @click="clickSubmit" v-if="isLastStep">Submit</button>
       </div>
     </template>
-  </app-stepper>
+  </vue-easy-stepper>
 </template>
 
 <script setup>
 import { reactive } from "vue";
 
-import AppStepper from "./components/AppStepper.vue";
+import "vue-easy-stepper/dist/style.css";
+
+import VueEasyStepper from "vue-easy-stepper";
 
 const state = reactive({
   steps: ["Step 1", "Step 2", "Step 3"],
