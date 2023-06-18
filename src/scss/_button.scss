@@ -1,30 +1,30 @@
-.vue-easy-stepper-button {
+.vue-simple-stepper-button {
   border-radius: 8px;
   padding: 0.6em 1.2em;
   border: 0;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--vue-easy-stepper-primary-color);
+  background-color: var(--vue-simple-stepper-primary-color);
   cursor: pointer;
   transition: border-color 0.25s;
 }
-.vue-easy-stepper-button:hover {
-  background-color: var(--vue-easy-stepper-button-hover-color);
+.vue-simple-stepper-button:hover {
+  background-color: var(--vue-simple-stepper-button-hover-color);
 }
 
-.vue-easy-stepper-button--outlined {
-  border: 1px solid var(--vue-easy-stepper-primary-color);
+.vue-simple-stepper-button--outlined {
+  border: 1px solid var(--vue-simple-stepper-primary-color);
   color: black;
   background-color: transparent;
 }
 
-.vue-easy-stepper-button--outlined:hover {
+.vue-simple-stepper-button--outlined:hover {
   background-color: transparent;
-  border-color: var(--vue-easy-stepper-button-hover-color);
+  border-color: var(--vue-simple-stepper-button-hover-color);
 }
 
-.vue-easy-stepper-button:focus,
-.vue-easy-stepper-button:focus-visible {
+.vue-simple-stepper-button:focus,
+.vue-simple-stepper-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }

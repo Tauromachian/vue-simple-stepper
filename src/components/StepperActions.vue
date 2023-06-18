@@ -4,7 +4,7 @@
       v-if="!isLastStep"
       color="primary"
       @click="clickNext"
-      class="vue-easy-stepper-button"
+      class="vue-simple-stepper-button"
     >
       Next
     </button>
@@ -13,7 +13,7 @@
       v-else
       @click="clickSubmit"
       color="primary"
-      class="vue-easy-stepper-button"
+      class="vue-simple-stepper-button"
     >
       Submit
     </button>
@@ -24,7 +24,7 @@
       variant="text"
       @click="clickPrevious"
       outlined
-      class="mr-2 vue-easy-stepper-button vue-easy-stepper-button--outlined"
+      class="mr-2 vue-simple-stepper-button vue-simple-stepper-button--outlined"
     >
       Previous
     </button>

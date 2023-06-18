@@ -22,7 +22,7 @@ You need to import the component doing:
 
 And its styles like this:
 
-`import "vue-easy-stepper/dist/style.css";`
+`import "vue-simple-stepper/dist/style.css";`
 
 ## Use
 
@@ -30,7 +30,7 @@ The easiest way to use is to copy and throw this in your code:
 
 ```vue
 <template>
-  <vue-easy-stepper
+  <vue-simple-stepper
     :steps="state.steps"
     :step="state.step"
     @click:next="nextStep"
@@ -40,15 +40,15 @@ The easiest way to use is to copy and throw this in your code:
     <div class="content first">asdfasd</div>
     <div class="content second">asdfasd</div>
     <div class="content third">asdfasd</div>
-  </vue-easy-stepper>
+  </vue-simple-stepper>
 </template>
 
 <script setup>
 import { reactive } from "vue";
 
-import "vue-easy-stepper/dist/style.css";
+import "vue-simple-stepper/dist/style.css";
 
-import VueEasyStepper from "vue-easy-stepper";
+import VueEasyStepper from "vue-simple-stepper";
 
 const state = reactive({
   steps: ["Step 1", "Step 2", "Step 3"],
@@ -86,47 +86,47 @@ In that case you can do it by using the CSS variables:
 
 ```CSS
 :root {
-  --vue-easy-stepper-primary-color: #c724f0;
-  --vue-easy-stepper-primary-color-contrast: white;
+  --vue-simple-stepper-primary-color: #c724f0;
+  --vue-simple-stepper-primary-color-contrast: white;
 
-  --vue-easy-stepper-button-hover-color: #b11dd6;
+  --vue-simple-stepper-button-hover-color: #b11dd6;
 
-  --vue-easy-stepper-secondary-color: #d8ceda;
-  --vue-easy-stepper-secondary-color-contrast: black;
+  --vue-simple-stepper-secondary-color: #d8ceda;
+  --vue-simple-stepper-secondary-color-contrast: black;
 }
 ```
 
 Or in case you want to further customize the buttons you can overwrite or extend these classes:
 
 ```CSS
-.vue-easy-stepper-button {
+.vue-simple-stepper-button {
   border-radius: 8px;
   padding: 0.6em 1.2em;
   border: 0;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--vue-easy-stepper-primary-color);
+  background-color: var(--vue-simple-stepper-primary-color);
   cursor: pointer;
   transition: border-color 0.25s;
 }
-.vue-easy-stepper-button:hover {
-  background-color: var(--vue-easy-stepper-button-hover-color);
+.vue-simple-stepper-button:hover {
+  background-color: var(--vue-simple-stepper-button-hover-color);
 }
 
-.vue-easy-stepper-button--outlined {
-  border: 1px solid var(--vue-easy-stepper-primary-color);
+.vue-simple-stepper-button--outlined {
+  border: 1px solid var(--vue-simple-stepper-primary-color);
   color: black;
   background-color: transparent;
 }
 
-.vue-easy-stepper-button--outlined:hover {
+.vue-simple-stepper-button--outlined:hover {
   background-color: transparent;
-  border-color: var(--vue-easy-stepper-button-hover-color);
+  border-color: var(--vue-simple-stepper-button-hover-color);
 }
 
-.vue-easy-stepper-button:focus,
-.vue-easy-stepper-button:focus-visible {
+.vue-simple-stepper-button:focus,
+.vue-simple-stepper-button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 ```
@@ -135,7 +135,7 @@ In case that you need to overwrite completely the action buttons do it by using 
 
 ```vue
 <template>
-  <vue-easy-stepper
+  <vue-simple-stepper
     :steps="state.steps"
     :step="state.step"
     @click:next="nextStep"
@@ -161,15 +161,15 @@ In case that you need to overwrite completely the action buttons do it by using 
         <button @click="clickSubmit" v-if="isLastStep">Submit</button>
       </div>
     </template>
-  </vue-easy-stepper>
+  </vue-simple-stepper>
 </template>
 
 <script setup>
 import { reactive } from "vue";
 
-import "vue-easy-stepper/dist/style.css";
+import "vue-simple-stepper/dist/style.css";
 
-import VueEasyStepper from "vue-easy-stepper";
+import VueEasyStepper from "vue-simple-stepper";
 
 const state = reactive({
   steps: ["Step 1", "Step 2", "Step 3"],

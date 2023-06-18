@@ -1,5 +1,5 @@
 {
-  "name": "vue-easy-stepper",
+  "name": "vue-simple-stepper",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -9,8 +9,8 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/vue-easy-stepper.es.js",
-      "require": "./dist/vue-easy-stepper.umd.js"
+      "import": "./dist/vue-simple-stepper.es.js",
+      "require": "./dist/vue-simple-stepper.umd.js"
     },
     "./dist/style.css": "./dist/style.css"
   },

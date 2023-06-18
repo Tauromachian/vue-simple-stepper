@@ -6,14 +6,14 @@ describe("StepperActions", () => {
     const wrapper = mount(StepperActions);
 
     expect(wrapper.find(".buttons-container").exists()).toBe(true);
-    expect(wrapper.find(".vue-easy-stepper-button").exists()).toBe(true);
+    expect(wrapper.find(".vue-simple-stepper-button").exists()).toBe(true);
   });
 
   it("emits click:next event when Next button is clicked", async () => {
     const wrapper = mount(StepperActions, {
       props: { isLastStep: false },
     });
-    await wrapper.find(".vue-easy-stepper-button").trigger("click");
+    await wrapper.find(".vue-simple-stepper-button").trigger("click");
 
     expect(wrapper.emitted()).toHaveProperty("click:next");
   });
@@ -22,7 +22,7 @@ describe("StepperActions", () => {
     const wrapper = mount(StepperActions, {
       props: { isFirstStep: false },
     });
-    await wrapper.find(".vue-easy-stepper-button--outlined").trigger("click");
+    await wrapper.find(".vue-simple-stepper-button--outlined").trigger("click");
 
     expect(wrapper.emitted()).toHaveProperty("click:previous");
   });
@@ -31,7 +31,7 @@ describe("StepperActions", () => {
     const wrapper = mount(StepperActions, {
       props: { isLastStep: true },
     });
-    await wrapper.find(".vue-easy-stepper-button").trigger("click");
+    await wrapper.find(".vue-simple-stepper-button").trigger("click");
 
     expect(wrapper.emitted()).toHaveProperty("click:submit");
   });
