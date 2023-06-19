@@ -14,6 +14,10 @@
     },
     "./dist/style.css": "./dist/style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tauromachian/vue-simple-stepper"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
