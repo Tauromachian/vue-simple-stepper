@@ -48,7 +48,7 @@ import { reactive } from "vue";
 
 import "vue-simple-stepper/dist/style.css";
 
-import VueEasyStepper from "vue-simple-stepper";
+import VueSimpleStepper from "vue-simple-stepper";
 
 const state = reactive({
   steps: ["Step 1", "Step 2", "Step 3"],
@@ -169,7 +169,7 @@ import { reactive } from "vue";
 
 import "vue-simple-stepper/dist/style.css";
 
-import VueEasyStepper from "vue-simple-stepper";
+import VueSimpleStepper from "vue-simple-stepper";
 
 const state = reactive({
   steps: ["Step 1", "Step 2", "Step 3"],
