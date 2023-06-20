@@ -1,6 +1,6 @@
 # Stepper Component
 
-The Stepper component is a versatile UI element designed to guide users through a multi-step process, like a registration form or setup process. It provides a clear indication of the current, completed, and upcoming steps, and also allows for navigating between these steps.
+Stepper component designed to guide users through a multi-step process, like a registration form or setup process. It provides a clear indication of the current, completed, and upcoming steps, and also allows for navigating between these steps.
 
 ## Features
 
