@@ -2,7 +2,6 @@
   "name": "vue-simple-stepper",
   "version": "1.0.0",
   "description": "Monorepo of vue-simple-stepper component. Contains both the component and the showcase site.",
-  "main": "index.js",
   "repository": "https://github.com/Tauromachian/vue-simple-stepper.git",
   "author": "Jose Garcia <54786476+Tauromachian@users.noreply.github.com>",
   "license": "MIT",
