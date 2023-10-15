@@ -86,6 +86,14 @@ const generateItem = (element, index) => {
   return null;
 };
 
+const getStepperItem = (element) => {
+  return h(
+    StepperItem,
+    { style: { width: "100%", display: "block" } },
+    () => element
+  );
+};
+
 const generateActions = () => {
   return slot?.actions
     ? h(
