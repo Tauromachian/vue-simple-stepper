@@ -75,12 +75,9 @@ const generateItem = (element, index) => {
   }
 
   if (index === props.step - 1) {
+    const stepperItem = getStepperItem(element);
     state.stepHasBeenVisited[index] = true;
-    return h(
-      StepperItem,
-      { style: { width: `${100 / props.steps.length}%` } },
-      () => element
-    );
+    return stepperItem;
   }
 
   return null;
