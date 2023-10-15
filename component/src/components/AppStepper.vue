@@ -26,6 +26,7 @@ const emit = defineEmits(["click:next", "click:previous", "click:submit"]);
 
 const state = reactive({
   stepHasBeenVisited: [],
+  stepsState: {}
 });
 
 const slot = useSlots();
