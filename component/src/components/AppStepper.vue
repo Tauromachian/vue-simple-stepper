@@ -64,11 +64,14 @@ const generateContent = () => {
 
 const generateItem = (element, index) => {
   if (state.stepHasBeenVisited[index]) {
-    return h(
-      StepperItem,
-      { style: { width: `${100 / props.steps.length}%` } },
-      () => element
-    );
+    const stepperItem = getStepperItem(element);
+    if (index !== props.step - 1) {
+      setTimeout(() => {
+        state.stepsState[index].state = "hidden";
+      }, 300);
+    }
+
+    return stepperItem;
   }
 
   if (index === props.step - 1) {
