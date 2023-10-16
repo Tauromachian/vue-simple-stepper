@@ -24,9 +24,9 @@ const props = defineProps({
 
 const emit = defineEmits(["click:next", "click:previous", "click:submit"]);
 
+const stepHasBeenVisited = [];
+
 const state = reactive({
-  stepHasBeenVisited: [],
-  stepsState: {}
 });
 
 const slot = useSlots();
