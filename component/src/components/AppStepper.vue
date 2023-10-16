@@ -31,7 +31,6 @@ let newStep = props.step;
 
 const state = reactive({
   stepperItems: [],
-  isDefaultSlotChangedProgrammatically: false
 });
 
 const slot = useSlots();
