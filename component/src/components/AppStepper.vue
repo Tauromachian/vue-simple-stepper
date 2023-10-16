@@ -26,6 +26,7 @@ const emit = defineEmits(["click:next", "click:previous", "click:submit"]);
 
 const stepHasBeenVisited = [];
 let isDefaultSlotChangedProgrammatically = false;
+let nonReactiveCurrentStep = 1;
 
 const state = reactive({
   stepperItems: [],
