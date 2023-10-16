@@ -54,14 +54,7 @@ const generateContent = () => {
   return h(
     "div",
     {
-      class: ["stepper-content"],
-      style: {
-        width: `${100 * props.steps.length}%`,
-        transform: `translateX(-${
-          ((props.step - 1) * 100) / props.steps.length
-        }%)`,
-        transition: "all 0.3s cubic-bezier(.25,.8,.5,1)",
-      },
+      class: ["stepper-content"]
     },
     stepperItems
   );
