@@ -61,20 +61,14 @@ const generateContent = () => {
 };
 
 const generateItem = (element, index) => {
-  if (state.stepHasBeenVisited[index]) {
-    const stepperItem = getStepperItem(element);
-    if (index !== props.step - 1) {
-      setTimeout(() => {
-        state.stepsState[index].state = "hidden";
-      }, 300);
-    }
-
+  if (stepHasBeenVisited[index]) {
+    const stepperItem = getStepperItem(element, index);
     return stepperItem;
   }
 
-  if (index === props.step - 1) {
-    const stepperItem = getStepperItem(element);
-    state.stepHasBeenVisited[index] = true;
+  if (index === newStep - 1) {
+    const stepperItem = getStepperItem(element, index);
+    stepHasBeenVisited[index] = true;
     return stepperItem;
   }
 
