@@ -130,6 +130,7 @@ watch(direction, () => {
   setTimeout(() => (state.currentStep = newStep), 300);
 });
 
+watchEffect(() => (newStep = props.step));
 
 watchEffect(() => {
   if (!isDefaultSlotChangedProgrammatically) {
