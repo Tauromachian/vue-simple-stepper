@@ -3,7 +3,15 @@
 </template>
 
 <script setup>
-import { h, useSlots, reactive, defineAsyncComponent } from "vue";
+import {
+  h,
+  useSlots,
+  reactive,
+  defineAsyncComponent,
+  watchEffect,
+  watch,
+  computed
+} from "vue";
 
 import StepperHeader from "./StepperHeader.vue";
 import StepperItem from "./StepperItem.vue";
@@ -14,12 +22,12 @@ const StepperActions = defineAsyncComponent(() =>
 const props = defineProps({
   steps: {
     type: Array,
-    default: () => [],
+    default: () => []
   },
   step: {
     type: Number,
-    default: 1,
-  },
+    default: 1
+  }
 });
 
 const emit = defineEmits(["click:next", "click:previous", "click:submit"]);
@@ -51,6 +59,29 @@ const generateContent = () => {
     return generateItem(element, index);
   });
 
+  const stepperWrapperComponent = makeSteperContentComponent(stepperItems);
+
+  if (direction.value === "left") {
+    hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
+    nonReactiveCurrentStep = newStep;
+
+    stepperWrapperComponent.props.class += " translate-left";
+
+    return stepperWrapperComponent;
+  }
+  if (direction.value === "right") {
+    hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
+    nonReactiveCurrentStep = newStep;
+
+    stepperWrapperComponent.props.class += " translate-right";
+
+    return stepperWrapperComponent;
+  }
+
+  return stepperWrapperComponent;
+};
+
+const makeSteperContentComponent = (stepperItems) => {
   return h(
     "div",
     {
@@ -107,7 +138,7 @@ const generateActions = () => {
           clickPrevious: () => emit("click:previous"),
           clickSubmit: () => emit("click:submit"),
           isFirstStep: props.step === 1,
-          isLastStep: props.step === props.steps.length,
+          isLastStep: props.step === props.steps.length
         })
       )
     : h(StepperActions, {
@@ -115,7 +146,7 @@ const generateActions = () => {
         "onClick:previous": () => emit("click:previous"),
         "onClick:submit": () => emit("click:submit"),
         isFirstStep: props.step === 1,
-        isLastStep: props.step === props.steps.length,
+        isLastSscaleXtep: props.step === props.steps.length
       });
 };
 
@@ -146,7 +177,7 @@ const render = () => {
   return h("div", { class: ["stepper"] }, [
     generateHeader(),
     generateContent(),
-    generateActions(),
+    generateActions()
   ]);
 };
 </script>
