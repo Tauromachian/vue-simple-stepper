@@ -166,4 +166,32 @@ const render = () => {
 .stepper-header {
   margin-bottom: 8px;
 }
+
+.translate-left {
+  width: 200%;
+  animation: translateLeft 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+@keyframes translateLeft {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.translate-right {
+  width: 200%;
+  animation: translateRight 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+}
+
+@keyframes translateRight {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 </style>
