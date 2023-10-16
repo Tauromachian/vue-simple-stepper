@@ -75,12 +75,13 @@ const generateItem = (element, index) => {
   return null;
 };
 
-const getStepperItem = (element) => {
-  return h(
-    StepperItem,
-    { style: { width: "100%", display: "block" } },
-    () => element
-  );
+
+const hideStepWithDelay = (stepperItem) => {
+  if (!stepperItem) return;
+
+  setTimeout(() => {
+    stepperItem.el.style.display = "none";
+  }, 300);
 };
 
 const generateActions = () => {
