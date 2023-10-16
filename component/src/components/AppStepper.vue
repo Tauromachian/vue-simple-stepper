@@ -124,6 +124,13 @@ const direction = computed(() => {
   return null;
 });
 
+watch(direction, () => {
+  if (props.state === state.currentStep) return;
+  const newStep = props.step;
+  setTimeout(() => (state.currentStep = newStep), 300);
+});
+
+
 watchEffect(() => {
   if (!isDefaultSlotChangedProgrammatically) {
     state.stepperItems = slot.default();
