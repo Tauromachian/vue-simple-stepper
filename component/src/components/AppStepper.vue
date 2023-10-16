@@ -25,6 +25,7 @@ const props = defineProps({
 const emit = defineEmits(["click:next", "click:previous", "click:submit"]);
 
 const stepHasBeenVisited = [];
+let isDefaultSlotChangedProgrammatically = false;
 
 const state = reactive({
   stepperItems: [],
@@ -117,13 +118,13 @@ const generateActions = () => {
 
 
 watchEffect(() => {
-  if (!state.isDefaultSlotChangedProgrammatically) {
+  if (!isDefaultSlotChangedProgrammatically) {
     state.stepperItems = slot.default();
   }
 });
 
 const render = () => {
-  state.isDefaultSlotChangedProgrammatically = true;
+  isDefaultSlotChangedProgrammatically = true;
   return h("div", { class: ["stepper"] }, [
     generateHeader(),
     generateContent(),
