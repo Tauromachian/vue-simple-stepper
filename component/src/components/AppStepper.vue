@@ -59,26 +59,26 @@ const generateContent = () => {
     return generateItem(element, index);
   });
 
-  const stepperWrapperComponent = makeSteperContentComponent(stepperItems);
+  const stepperContent = makeSteperContentComponent(stepperItems);
 
   if (direction.value === "left") {
     hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
     nonReactiveCurrentStep = newStep;
 
-    stepperWrapperComponent.props.class += " translate-left";
+    stepperContent.props.class += " translate-left";
 
-    return stepperWrapperComponent;
+    return stepperContent;
   }
   if (direction.value === "right") {
     hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
     nonReactiveCurrentStep = newStep;
 
-    stepperWrapperComponent.props.class += " translate-right";
+    stepperContent.props.class += " translate-right";
 
-    return stepperWrapperComponent;
+    return stepperContent;
   }
 
-  return stepperWrapperComponent;
+  return stepperContent;
 };
 
 const makeSteperContentComponent = (stepperItems) => {
