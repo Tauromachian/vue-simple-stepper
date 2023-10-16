@@ -75,6 +75,19 @@ const generateItem = (element, index) => {
   return null;
 };
 
+const getStepperItem = (element, index) => {
+  let display = "none";
+
+  if (index === nonReactiveCurrentStep - 1) {
+    display = "block";
+  }
+
+  if (index === newStep - 1) {
+    display = "block";
+  }
+
+  return h(StepperItem, { style: { width: "100%", display } }, () => element);
+};
 
 const hideStepWithDelay = (stepperItem) => {
   if (!stepperItem) return;
