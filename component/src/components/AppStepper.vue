@@ -33,16 +33,15 @@ const props = defineProps({
 const emit = defineEmits(["click:next", "click:previous", "click:submit"]);
 
 const stepHasBeenVisited = [];
-let isDefaultSlotChangedProgrammatically = false;
 let nonReactiveCurrentStep = 1;
 let newStep = props.step;
 
+const slot = useSlots();
+
 const state = reactive({
-  stepperItems: [],
+  stepperItems: [...slot.default()],
   currentStep: 1
 });
-
-const slot = useSlots();
 
 const generateHeader = () => {
   return h(
@@ -162,14 +161,7 @@ watch(direction, () => {
 
 watchEffect(() => (newStep = props.step));
 
-watchEffect(() => {
-  if (!isDefaultSlotChangedProgrammatically) {
-    state.stepperItems = slot.default();
-  }
-});
-
 const render = () => {
-  isDefaultSlotChangedProgrammatically = true;
   return h("div", { class: ["stepper"] }, [
     generateHeader(),
     generateContent(),
