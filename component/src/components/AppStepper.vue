@@ -116,6 +116,13 @@ const generateActions = () => {
       });
 };
 
+const direction = computed(() => {
+  if (props.step < state.currentStep) return "left";
+
+  if (props.step > state.currentStep) return "right";
+
+  return null;
+});
 
 watchEffect(() => {
   if (!isDefaultSlotChangedProgrammatically) {
