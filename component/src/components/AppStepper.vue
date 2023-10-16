@@ -59,7 +59,7 @@ const generateContent = () => {
     return generateItem(element, index);
   });
 
-  const stepperContent = makeSteperContentComponent(stepperItems);
+  const stepperContent = makeStepperContent(stepperItems);
 
   if (direction.value === "left") {
     hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
@@ -81,7 +81,7 @@ const generateContent = () => {
   return stepperContent;
 };
 
-const makeSteperContentComponent = (stepperItems) => {
+const makeStepperContent = (stepperItems) => {
   return h(
     "div",
     {
