@@ -61,23 +61,19 @@ const generateContent = () => {
 
   const stepperContent = makeStepperContent(stepperItems);
 
+  if (!direction.value) {
+    return stepperContent;
+  }
+
+  hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
+  nonReactiveCurrentStep = newStep;
+
   if (direction.value === "left") {
-    hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
-    nonReactiveCurrentStep = newStep;
-
     stepperContent.props.class += " translate-left";
-
-    return stepperContent;
-  }
-  if (direction.value === "right") {
-    hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
-    nonReactiveCurrentStep = newStep;
-
-    stepperContent.props.class += " translate-right";
-
     return stepperContent;
   }
 
+  stepperContent.props.class += " translate-right";
   return stepperContent;
 };
 
