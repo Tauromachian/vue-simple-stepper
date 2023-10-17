@@ -65,15 +65,12 @@ const generateContent = () => {
     return stepperContent;
   }
 
+  direction.value === "left"
+    ? (stepperContent.props.class += " translate-left")
+    : (stepperContent.props.class += " translate-right");
+
   hideStepWithDelay(stepperItems[nonReactiveCurrentStep - 1]);
   nonReactiveCurrentStep = newStep;
-
-  if (direction.value === "left") {
-    stepperContent.props.class += " translate-left";
-    return stepperContent;
-  }
-
-  stepperContent.props.class += " translate-right";
   return stepperContent;
 };
 
