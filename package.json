@@ -6,6 +6,9 @@
   "scripts": {
     "dev:component": "yarn workspace vue-simple-stepper dev",
     "test": "yarn workspace vue-simple-stepper  test",
+    "deploy": "yarn workspace vue-simple-stepper run build && yarn workspace vue-simple-stepper publish",
+    "build": "yarn workspace vue-simple-stepper vite build",
+    "preview": "yarn workspace vue-simple-stepper vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
