@@ -5,7 +5,7 @@
   "repository": "https://github.com/Tauromachian/vue-simple-stepper.git",
   "scripts": {
     "dev:component": "yarn workspace vue-simple-stepper dev",
-    "test:component": "yarn workspace vue-simple-stepper  test",
+    "test": "yarn workspace vue-simple-stepper  test",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
