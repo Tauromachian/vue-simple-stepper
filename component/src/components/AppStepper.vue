@@ -20,6 +20,8 @@ const StepperActions = defineAsyncComponent(() =>
   import("./StepperActions.vue")
 );
 
+import { debounce } from "../utils/debounce.js";
+
 const props = defineProps({
   steps: {
     type: Array,
@@ -123,16 +125,16 @@ const generateActions = () => {
         "div",
         null,
         slot.actions({
-          clickNext: () => emit("click:next"),
-          clickPrevious: () => emit("click:previous"),
+          clickNext: () => debounce(emit("click:next")),
+          clickPrevious: () => debounce(emit("click:previous")),
           clickSubmit: () => emit("click:submit"),
           isFirstStep: props.step === 1,
           isLastStep: props.step === props.steps.length
         })
       )
     : h(StepperActions, {
-        "onClick:next": () => emit("click:next"),
-        "onClick:previous": () => emit("click:previous"),
+        "onClick:next": () => debounce(() => emit("click:next")),
+        "onClick:previous": () => debounce(() => emit("click:previous")),
         "onClick:submit": () => emit("click:submit"),
         isFirstStep: props.step === 1,
         isLastSscaleXtep: props.step === props.steps.length
