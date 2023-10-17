@@ -10,7 +10,8 @@ import {
   defineAsyncComponent,
   watchEffect,
   watch,
-  computed
+  computed,
+  onMounted
 } from "vue";
 
 import StepperHeader from "./StepperHeader.vue";
@@ -39,7 +40,7 @@ let newStep = props.step;
 const slot = useSlots();
 
 const state = reactive({
-  stepperItems: [...slot.default()],
+  stepperItems: [],
   currentStep: 1
 });
 
@@ -104,13 +105,9 @@ const generateItem = (element, index) => {
 const getStepperItem = (element, index) => {
   let display = "none";
 
-  if (index === nonReactiveCurrentStep - 1) {
-    display = "block";
-  }
+  if (index === nonReactiveCurrentStep - 1) display = "block";
 
-  if (index === newStep - 1) {
-    display = "block";
-  }
+  if (index === newStep - 1) display = "block";
 
   return h(StepperItem, { style: { width: "100%", display } }, () => element);
 };
@@ -160,6 +157,11 @@ watch(direction, () => {
 });
 
 watchEffect(() => (newStep = props.step));
+
+onMounted(() => {
+  if (!slot.default) return;
+  state.stepperItems = [...slot.default()];
+});
 
 const render = () => {
   return h("div", { class: ["stepper"] }, [
