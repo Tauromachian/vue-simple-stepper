@@ -1,5 +1,5 @@
 <template>
-  <hr class="divider" :style="{ 'background-color': color }" />
+  <hr class="divider" :class="{ active }" />
 </template>
 
 <script setup>
@@ -20,9 +20,13 @@ defineProps({
   height: 2px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(---vue-simple-stepper-divider-color);
+  background-color: var(--vue-simple-stepper-divider-color-neutral);
   border: 0;
   border-radius: 10px;
   width: 100%;
+}
+
+.active {
+  background-color: var(--vue-simple-stepper-divider-color);
 }
 </style>
