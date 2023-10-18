@@ -22,7 +22,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "yarn run build && yarn publish",
+    "deploy": "yarn run build && yarn np",
     "test": "vitest"
   },
   "keywords": [
