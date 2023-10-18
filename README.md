@@ -6,7 +6,7 @@ Stepper component designed to guide users through a multi-step process, like a r
 
 - Dynamically renders a specified number of steps based on the `steps` prop.
 - Keeps track of the current step and which steps have been visited.
-- Allows for customization of the header and action buttons via slots.
+- Allows for customization of the action buttons via slots.
 - Emits events when the user navigates through the steps.
 - Handles step navigation logic, showing and hiding appropriate elements as needed.
 
