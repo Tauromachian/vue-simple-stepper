@@ -93,6 +93,11 @@ In that case you can do it by using the CSS variables:
 
   --vue-simple-stepper-secondary-color: #d8ceda;
   --vue-simple-stepper-secondary-color-contrast: black;
+
+  --vue-simple-stepper-divider-color: var(--vue-simple-stepper-primary-color);
+  --vue-simple-stepper-divider-color-neutral: var(
+    --vue-simple-stepper-secondary-color
+  );
 }
 ```
 
