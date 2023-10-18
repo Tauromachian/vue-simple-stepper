@@ -6,12 +6,12 @@
 defineProps({
   vertical: {
     type: Boolean,
-    default: false,
+    default: false
   },
   color: {
     type: String,
-    default: "",
-  },
+    default: ""
+  }
 });
 </script>
 
@@ -20,7 +20,7 @@ defineProps({
   height: 2px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--vue-simple-stepper-secondary-color);
+  background-color: var(---vue-simple-stepper-divider-color);
   border: 0;
   border-radius: 10px;
   width: 100%;
