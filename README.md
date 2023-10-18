@@ -9,6 +9,7 @@ Stepper component designed to guide users through a multi-step process, like a r
 - Allows for customization of the action buttons via slots.
 - Emits events when the user navigates through the steps.
 - Handles step navigation logic, showing and hiding appropriate elements as needed.
+- Lazy loads content components as needed
 
 ## Installation
 
