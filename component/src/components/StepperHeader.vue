@@ -25,7 +25,7 @@
           v-if="index !== steps.length - 1"
           :thickness="2"
           class="border-opacity-75"
-          :color="step > index + 1 ? '#c724f0' : '#ebe3ec'"
+          :active="step > index + 1"
         ></base-divider>
       </template>
     </div>
@@ -39,12 +39,12 @@ import BaseDivider from "./BaseDivider.vue";
 defineProps({
   step: {
     type: Number,
-    default: 0,
+    default: 0
   },
   steps: {
     type: Array,
-    default: () => [],
-  },
+    default: () => []
+  }
 });
 </script>
 
