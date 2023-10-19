@@ -7,4 +7,12 @@ describe("BaseDivider", () => {
     const wrapper = mount(BaseDivider);
     expect(wrapper.find(".divider").exists()).toBe(true);
   });
+  it("adds the active class correctly", () => {
+    const wrapper = mount(BaseDivider, {
+      props: {
+        active: true
+      }
+    });
+    expect(wrapper.find(".divider.active").exists()).toBe(true);
+  });
 });
