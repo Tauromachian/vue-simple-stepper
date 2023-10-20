@@ -6,7 +6,7 @@
   "scripts": {
     "dev:component": "yarn workspace vue-simple-stepper dev",
     "test": "yarn workspace vue-simple-stepper  test",
-    "deploy": "cp README.md component/README.md && yarn workspace vue-simple-stepper publish",
+    "deploy": "cp README.md component/README.md && yarn workspace vue-simple-stepper deploy",
     "build": "yarn workspace vue-simple-stepper vite build",
     "preview": "yarn workspace vue-simple-stepper vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
