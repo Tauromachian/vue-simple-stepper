@@ -5,6 +5,7 @@
   "repository": "https://github.com/Tauromachian/vue-simple-stepper.git",
   "scripts": {
     "dev:component": "yarn workspace vue-simple-stepper dev",
+    "dev:site": "yarn workspace site dev",
     "test": "yarn workspace vue-simple-stepper  test",
     "deploy": "cp README.md component/README.md && yarn workspace vue-simple-stepper deploy",
     "build": "yarn workspace vue-simple-stepper vite build",
@@ -15,10 +16,9 @@
   "author": "Jose Garcia <54786476+Tauromachian@users.noreply.github.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": [
-    "component",
-    "site"
-  ],
+  "workspaces": {
+    "packages": ["packages/*"]
+  },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.3.2",
     "@vue/eslint-config-prettier": "^8.0.0",

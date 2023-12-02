@@ -16,11 +16,11 @@ import {
 
 import StepperHeader from "./StepperHeader.vue";
 import StepperItem from "./StepperItem.vue";
-const StepperActions = defineAsyncComponent(() =>
-  import("./StepperActions.vue")
-);
-
 import { debounce } from "../utils/debounce.js";
+
+const StepperActions = defineAsyncComponent(
+  () => import("./StepperActions.vue")
+);
 
 const props = defineProps({
   steps: {
