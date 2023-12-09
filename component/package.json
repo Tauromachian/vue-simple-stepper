@@ -33,14 +33,12 @@
     "vue-component",
     "component"
   ],
-  "dependencies": {
-    "@mdi/js": "^7.2.96",
-    "sass": "^1.63.2"
-  },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@mdi/js": "^7.2.96",
+    "sass": "^1.63.2",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vue/test-utils": "^2.3.2",
     "jsdom": "^22.1.0",
