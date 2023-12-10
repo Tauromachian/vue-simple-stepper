@@ -5,12 +5,14 @@
       <div class="links-container">
         <a
           aria-label="Link to Github"
-          href="https://github.com/Tauromachian/vue-simple-stepper">
+          href="https://github.com/Tauromachian/vue-simple-stepper"
+        >
           <icon-helper icon="mdiGithub" width="50px" height="50px" />
         </a>
         <a
           haria-label="Link to NPM"
-          ref="https://www.npmjs.com/package/vue-simple-stepper">
+          ref="https://www.npmjs.com/package/vue-simple-stepper"
+        >
           <icon-helper icon="mdiNpm" width="50px" height="50px" />
         </a>
       </div>
@@ -136,10 +138,12 @@
 </template>
 
 <script setup>
+import { onMounted } from "vue";
+
+import Prism from "prismjs";
 import "prismjs/themes/prism-tomorrow.min.css";
 import "prismjs/plugins/toolbar/prism-toolbar.min.css";
 
-import "prismjs";
 import "prismjs/plugins/toolbar/prism-toolbar";
 import "prismjs/plugins/toolbar/prism-toolbar.css";
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard";
@@ -148,6 +152,11 @@ import "prismjs/plugins/normalize-whitespace/prism-normalize-whitespace";
 
 import "prismjs/components/prism-javascript";
 import "prismjs/components/prism-css";
+
+onMounted(async () => {
+  await nextTick();
+  Prism.highlightAll();
+});
 </script>
 
 <style>
