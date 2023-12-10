@@ -17,7 +17,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "component",
+    "vue-simple-stepper",
     "site"
   ],
   "devDependencies": {

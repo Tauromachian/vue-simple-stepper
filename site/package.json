@@ -19,7 +19,7 @@
     "normalize.css": "^8.0.1",
     "prismjs": "^1.29.0",
     "vue-highlight.js": "^3.1.0",
-    "vue-simple-stepper": "1.0.1"
+    "vue-simple-stepper": "workspace:^"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
