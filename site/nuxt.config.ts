@@ -36,7 +36,7 @@ export default defineNuxtConfig({
         {
           hid: "og:image",
           property: "og:image",
-          content: "website-logo-min.png"
+          content: "favicon.ico"
         },
         { property: "og:image:alt", content: "Image of the portfolio" },
         { property: "og:image:size", content: "300" },

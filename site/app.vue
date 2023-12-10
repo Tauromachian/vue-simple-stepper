@@ -10,7 +10,7 @@
           <icon-helper icon="mdiGithub" width="50px" height="50px" />
         </a>
         <a
-          haria-label="Link to NPM"
+          aria-label="Link to NPM"
           href="https://www.npmjs.com/package/vue-simple-stepper"
         >
           <icon-helper icon="mdiNpm" width="50px" height="50px" />
