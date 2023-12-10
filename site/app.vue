@@ -29,58 +29,68 @@
 
     <features-section></features-section>
 
-    <base-section title="Installation">
-      <p>Install it from npm</p>
-      <pre class="language-javascript"><code>npm install vue-simple-stepper</code></pre>
-      <p>You need to import the component doing:</p>
-      <pre class="language-javascript"><code>import VueSimpleStepper from 'vue-simple-stepper'</code></pre>
-      <p>And its styles like this:</p>
-      <pre class="language-javascript"><code>import "vue-simple-stepper/dist/style.css";</code></pre>
-    </base-section>
+    <client-only>
+      <base-section title="Installation">
+        <p>Install it from npm</p>
+        <pre
+          class="language-javascript"
+        ><code>npm install vue-simple-stepper</code></pre>
+        <p>You need to import the component doing:</p>
+        <pre
+          class="language-javascript"
+        ><code>import VueSimpleStepper from 'vue-simple-stepper'</code></pre>
+        <p>And its styles like this:</p>
+        <pre
+          class="language-javascript"
+        ><code>import "vue-simple-stepper/dist/style.css";</code></pre>
+      </base-section>
+    </client-only>
 
-    <base-section title="Use">
-      <p>The easiest way to use is to copy and throw this in your code:</p>
-      <pre class="language-html" data-src="ExampleOne.vue"></pre>
-      <p>
-        Any element found in the default slot of the component will be
-        automatically added to the stepper. Notice that the steps data prop
-        number coincides with the number of elements in the stepper.
-      </p>
-      <p>
-        You can set a default starting point of the component with the step
-        prop. With it you can also control the stepper programmatically.
-      </p>
-      <p>Any time the actions of the stepper are clicked the events:</p>
-      <ul>
-        <li><app-chip> click:next </app-chip></li>
-        <li><app-chip>click:previous</app-chip></li>
-        <li>
-          <app-chip>click:submit </app-chip>Are going to be emitted in by the
-          stepper on click of the respective action.
-        </li>
-      </ul>
-      <p>
-        One common problem is the customization of the stepper to fit the
-        framework or styles of choice. In that case you can do it by using the
-        CSS variables:
-      </p>
-      <pre class="language-css" data-src="root-general-styles.css"></pre>
-      <p>
-        Or in case you want to further customize the buttons you can overwrite
-        or extend these classes:
-      </p>
-      <pre class="language-css" data-src="component-css-styles.css"></pre>
-      <p>
-        In case that you need to overwrite completely the action buttons do it
-        by using the <app-chip> actions </app-chip>slot like so:
-      </p>
-      <pre class="language-html" data-src="ExampleTwo.vue"></pre>
-      <app-card>
-        <card-text>
-          <example-two></example-two>
-        </card-text>
-      </app-card>
-    </base-section>
+    <client-only>
+      <base-section title="Use">
+        <p>The easiest way to use is to copy and throw this in your code:</p>
+        <pre class="language-html" data-src="ExampleOne.vue"></pre>
+        <p>
+          Any element found in the default slot of the component will be
+          automatically added to the stepper. Notice that the steps data prop
+          number coincides with the number of elements in the stepper.
+        </p>
+        <p>
+          You can set a default starting point of the component with the step
+          prop. With it you can also control the stepper programmatically.
+        </p>
+        <p>Any time the actions of the stepper are clicked the events:</p>
+        <ul>
+          <li><app-chip> click:next </app-chip></li>
+          <li><app-chip>click:previous</app-chip></li>
+          <li>
+            <app-chip>click:submit </app-chip>Are going to be emitted in by the
+            stepper on click of the respective action.
+          </li>
+        </ul>
+        <p>
+          One common problem is the customization of the stepper to fit the
+          framework or styles of choice. In that case you can do it by using the
+          CSS variables:
+        </p>
+        <pre class="language-css" data-src="root-general-styles.css"></pre>
+        <p>
+          Or in case you want to further customize the buttons you can overwrite
+          or extend these classes:
+        </p>
+        <pre class="language-css" data-src="component-css-styles.css"></pre>
+        <p>
+          In case that you need to overwrite completely the action buttons do it
+          by using the <app-chip> actions </app-chip>slot like so:
+        </p>
+        <pre class="language-html" data-src="ExampleTwo.vue"></pre>
+        <app-card>
+          <card-text>
+            <example-two></example-two>
+          </card-text>
+        </app-card>
+      </base-section>
+    </client-only>
 
     <base-section title="Props">
       <ul>
