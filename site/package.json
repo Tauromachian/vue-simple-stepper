@@ -12,6 +12,15 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
+  "dependencies": {
+    "@jogarcia/mgrid": "^1.0.0",
+    "@mdi/js": "^7.2.96",
+    "highlight.js": "^11.8.0",
+    "normalize.css": "^8.0.1",
+    "prismjs": "^1.29.0",
+    "vue-highlight.js": "^3.1.0",
+    "vue-simple-stepper": "1.0.1"
+  },
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "nuxt": "^3.8.1",
