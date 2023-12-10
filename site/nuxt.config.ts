@@ -1,10 +1,4 @@
 export default defineNuxtConfig({
-  ssr: true,
-  nitro: {
-    prerender: {
-      crawlLinks: true
-    }
-  },
   app: {
     head: {
       title: "Stepper",
